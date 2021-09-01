@@ -87,7 +87,7 @@ function gameEngine(){
         level = 0;
         counter = 0;
         count = 0;
-        speed = 1;
+        speed = 6;
     }
     // Snake thindid takshna score increment aagatte and food regenerate aagatte
     if(snakearr[0].y === food.y && snakearr[0].x === food.x){
