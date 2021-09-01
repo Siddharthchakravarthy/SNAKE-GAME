@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.Body{
+    background : url("IMAGES FAVICONS/background.jpg");
+    min-height : 100vh;
+    background-size: 100vw 110vh;
+    background-repeat: no-repeat;
+    display : flex;
+    /* id yaake andre ee body li baro yaavude element aagli flexible aag irakke */
+    justify-content: center;
+    /* idu yella elements of flexible container align maadakke use aagatte  */
+    align-items: center;
+    /* idu yella items nu center ge taratte */
+}
+.board {
+    background : linear-gradient(rgb(241, 173, 173), rgb(211, 211, 44), rgb(9, 131, 9) );
+    width : 90vmin;
+    height : 92vmin;
+    /* border : 2px solid black; */
+    display : grid;
+    /* so iddrinda namma yella rows and colums aagi vingadane aagatte */
+    grid-template-rows : repeat(15, 1fr) ;
+    /* illi idu bardid takshna hoog noodu en aagatte anta somewhat different kaansatte inspect maad,daaga */
+    grid-template-columns: repeat(15 , 1fr);
+    /* so 18 rows and 18 colums aagoitu */
+    position: relative;
+    left : 20px;
+}
+
+.head{
+    /* background-image: url("IMAGES FAVICONS/pallu.jpg");
+    
+    background-repeat: no-repeat; */
+    /* background-size: 6vmin 7vmin; */
+    background :linear-gradient(purple , rgb(238, 150, 150));
+    border : 1px solid white;
+    border-radius: 10px;
+}
+
+.snakeBody{
+    /* background-image: url("IMAGES FAVICONS/pizza.jpg");
+    background-size: 6vmin 7vmin;
+    background-position-x: -9px;
+    background-position-y: -3px; */
+    background :white;
+    border : 3px solid rgb(235, 219, 219);
+    border-radius: 2em;
+}
+
+.food{
+    /* background-image: url("IMAGES FAVICONS/pizza.jpg");
+    background-size: 11vmin 7vmin;
+    background-position-x: -9px;
+    background-position-y: -3px; */
+    background :linear-gradient(rgb(255, 0, 0) , rgb(238, 150, 150));
+    border : 3px solid rgb(235, 219, 219);
+    border-radius: 1em;
+}
+
+#Score{
+    position :absolute;
+    top : 9px;
+    right : 200px;
+    color: ivory;
+    font-size: 6vmin;
+    font-family: Oswald;
+    border-color: khaki;
+    border-style: double;
+}
+
+#Level{
+    position :absolute;
+    top : 100px;
+    right : 200px;
+    color: ivory;
+    font-size: 6vmin;
+    font-family: Oswald;
+    border-color: khaki;
+    border-style: double;
+}
+
+#heading{
+    top : 10px;
+    left : 10px;
+    position : absolute;
+    color:  rgb(30, 255, 0);
+    font-size: 6vmin;
+    font-family: Oswald;
+    border-color: rgb(158, 180, 59);
+    border-style: double;
+}
