@@ -57,12 +57,12 @@ function isCollide (snakearr){
     // if we collide into ourself
     for(let i = 1 ; i < snakearr.length; i++){
         if(snakearr[i].x === snakearr[0].x && snakearr[0].y === snakearr[i].y){
-            alert("game got over fool. You bit your own ass as expected, press any key to play the game again, if you want that is!.");
+            alert("press any key to play the game again.");
             return true;
         }
     }
     if(snakearr[0].x >= 15 || snakearr[0].x <= 0 || snakearr[0].y >= 15 || snakearr[0].y <= 0){
-        alert("game got over fool. You got your ass kicked by the wall, press any key to play the game again, if you want that is!.");
+        alert("press any key to play the game again.");
         return true;
     }
 
