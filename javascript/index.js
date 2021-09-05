@@ -1,10 +1,10 @@
 // first constants na declare maadana
 // constants
 let inputDir = {x : 0 , y : 0};
-// const foodsound = new Audio ('Css/MUSIC, SOUNDS/food.mp3');
-// const gameOverSound = new Audio ('Css/MUSIC, SOUNDS/gameover.mp3');
-// const moveSound = new Audio ('Css/MUSIC, SOUNDS/move.mp3');
-// const musicSound = new Audio ('Css/MUSIC, SOUNDS/game on.mp3');
+const foodsound = new Audio ('Css/MUSIC, SOUNDS/food.mp3');
+const gameOverSound = new Audio ('Css/MUSIC, SOUNDS/gameover.mp3');
+const moveSound = new Audio ('Css/MUSIC, SOUNDS/move.mp3');
+const musicSound = new Audio ('Css/MUSIC, SOUNDS/game on.mp3');
 let speed = 6;
 let level = 0;
 let previouslevel = 0;
