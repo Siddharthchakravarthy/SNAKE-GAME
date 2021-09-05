@@ -1,10 +1,10 @@
 // first constants na declare maadana
 // constants
 let inputDir = {x : 0 , y : 0};
-// const foodsound = new Audio ('FoodSound.mp3');
-// const gameOverSound = new Audio ('gameOver.mp3');
-// const moveSound = new Audio ('MUSIC, SOUNDS/moveSound.mp3');
-// const musicSound = new Audio ('music.mp3');
+// const foodsound = new Audio ('Css/MUSIC, SOUNDS/food.mp3');
+// const gameOverSound = new Audio ('Css/MUSIC, SOUNDS/gameover.mp3');
+// const moveSound = new Audio ('Css/MUSIC, SOUNDS/move.mp3');
+// const musicSound = new Audio ('Css/MUSIC, SOUNDS/game on.mp3');
 let speed = 6;
 let level = 0;
 let previouslevel = 0;
@@ -72,15 +72,15 @@ function gameEngine(){
     // part 1 : Updating the snake array and food
     
     if( isCollide(snakearr) ){
-        // gameOverSound.play();
-        // musicSound.pause();
+        gameOverSound.play();
+        musicSound.pause();
         inputDir = {x : 0, y : 0};
         // same alli macro li starting nalli en declare 
         // maadidvo initial position adne declare maadbeku
         
         snakearr = [{x : 13 , y : 12}];
         food = {x : 3 , y : 4};
-        // musicSound.play();
+       
         
         score = 0;
         Score.innerHTML = "SCORE : " + score;
@@ -92,6 +92,7 @@ function gameEngine(){
     // Snake thindid takshna score increment aagatte and food regenerate aagatte
     if(snakearr[0].y === food.y && snakearr[0].x === food.x){
         score++;
+        foodsound.play();
         Score.innerHTML = "SCORE : " + score;
         snakearr.unshift({x : snakearr[0].x + inputDir.x , y : snakearr[0].y + inputDir.y});
         //snakearr ge unshift add maadatte element na
@@ -159,7 +160,8 @@ window.addEventListener('keydown', e => {
     // start the game key press aad takshna
     // yaakandre keydown aadaaga event listener haakideevi
     // so as we press any key the snake starts moving downwards yaakandre y = 1
-    // moveSound.play();
+    moveSound.play();
+     musicSound.play();
     console.log(e);
     switch(e.key) {
         case "ArrowUp" :
